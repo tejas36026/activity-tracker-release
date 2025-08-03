@@ -1,0 +1,46 @@
+{
+  "name": "activity-tracker",
+  "version": "1.0.0",
+  "description": "Comprehensive keystroke and activity tracking application with invisible mode",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder",
+    "build-win": "electron-builder --win",
+    "build-mac": "electron-builder --mac",
+    "build-linux": "electron-builder --linux"
+  },
+  "keywords": [
+    "electron",
+    "activity-tracker",
+    "keystroke-logger",
+    "productivity",
+    "monitoring"
+  ],
+  "author": "Activity Tracker Team",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "28.3.3",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "active-win": "^8.2.1",
+    "chart.js": "^3.9.1",
+    "node-global-key-listener": "^0.1.1"
+  },
+  "build": {
+    "appId": "com.activitytracker.app",
+    "productName": "Activity Tracker",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "*.js",
+      "*.html",
+      "*.css",
+      "package.json",
+      "data/**/*"
+    ]
+  }
+}
